@@ -28,7 +28,7 @@ class RectangleTestCase(unittest.TestCase):
     def test_perimeter_positive(self):
         """Проверка периметра для корректных положительных сторон."""
         res = rectangle.perimeter(VALID_A, VALID_B)
-        res1 = res, 2 * (VALID_A + VALID_B)
+        res1 = 2 * (VALID_A + VALID_B)
         self.assertEqual(res, res1)
 
     # 2. Отрицательные значения (стороны не могут быть отрицательными)
