@@ -40,3 +40,6 @@ class CircleTestCase(unittest.TestCase):
         """Проверка длины окружности для r = 1.5."""
         res = 2 * math.pi * 1.5
         self.assertAlmostEqual(circle.perimeter(1.5), res)
+
+if __name__ == '__main__':
+    unittest.main()
