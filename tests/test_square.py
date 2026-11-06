@@ -15,12 +15,20 @@ class SquareTestCase(unittest.TestCase):
     def test_area_positive(self):
         """Проверка площади для положительной стороны."""
         res = square.area(VALID_SIDE)
-        self.assertEqual(res, VALID_SIDE * VALID_SIDE)
+        res1 = VALID_SIDE * VALID_SIDE
+        self.assertEqual(res, res1)
 
+    def test_area_positive(self):
+        """Проверка площади для положительной стороны."""
+        res = square.area(8)
+        res1 = 8 * 8
+        self.assertEqual(res, res1)
+    
     def test_perimeter_positive(self):
         """Проверка периметра для положительной стороны."""
         res = square.perimeter(VALID_SIDE)
-        self.assertEqual(res, 4 * VALID_SIDE)
+        res1 = 4 * VALID_SIDE
+        self.assertEqual(res, res1)
 
     # 2. Отрицательные значения (сторона не может быть отрицательной)
     def test_area_negative(self):

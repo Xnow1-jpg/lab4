@@ -18,12 +18,20 @@ class TriangleTestCase(unittest.TestCase):
     def test_area_positive(self):
         """Проверка площади для положительных основания и высоты."""
         res = triangle.area(VALID_A, VALID_H)
-        self.assertAlmostEqual(res, (VALID_A * VALID_H) / 2)
+        res1 = (VALID_A * VALID_H) / 2
+        self.assertAlmostEqual(res, res1)
+
+    def test_area_positive(self):
+        """Проверка площади для положительных основания и высоты."""
+        res = triangle.area(VALID_A, 7)
+        res1 = (VALID_A * 7) / 2
+        self.assertAlmostEqual(res, res1)
 
     def test_perimeter_positive(self):
         """Проверка периметра для положительных сторон."""
         res = triangle.perimeter(VALID_A, VALID_B, VALID_C)
-        self.assertEqual(res, VALID_A + VALID_B + VALID_C)
+        res1 = VALID_A + VALID_B + VALID_C
+        self.assertEqual(res, res1)
 
     # 2. Отрицательные значения (сторона и высота не могут быть отрицательными)
     def test_area_negative(self):

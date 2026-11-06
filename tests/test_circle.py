@@ -16,12 +16,20 @@ class CircleTestCase(unittest.TestCase):
     def test_area_positive(self):
         """Проверка площади для положительного радиуса."""
         res = circle.area(VALID_RADIUS)
-        self.assertAlmostEqual(res, math.pi * VALID_RADIUS * VALID_RADIUS)
+        res1 = math.pi * VALID_RADIUS * VALID_RADIUS
+        self.assertAlmostEqual(res, res1)
+    
+    def test_area_positive(self):
+        """Проверка площади для положительного радиуса."""
+        res = circle.area(10)
+        res1 = math.pi * 10 * 10
+        self.assertAlmostEqual(res, res1)
 
     def test_perimeter_positive(self):
         """Проверка длины окружности для положительного радиуса."""
         res = circle.perimeter(VALID_RADIUS)
-        self.assertAlmostEqual(res, 2 * math.pi * VALID_RADIUS)
+        res1 = 2 * math.pi * VALID_RADIUS
+        self.assertAlmostEqual(res, res1)
 
     # 2. Отрицательные значения (длина стороны/радиус не могут быть отрицательными)
     def test_area_negative(self):
